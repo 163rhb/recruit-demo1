@@ -61,7 +61,6 @@ export default {
                                this.$message.success('登录成功！')
                                window.sessionStorage.setItem("user",JSON.stringify(resp))
                                this.$router.replace('/Hr_index')
-
                            }
                        })
                     } else {
@@ -83,7 +82,6 @@ export default {
     padding: 35px 35px 15px 35px;/*//内边距,上，右，下，左*/
     background: white;
     border: 1px solid silver;
-
 }
     .LoginRem{
         margin-bottom: 20px;
