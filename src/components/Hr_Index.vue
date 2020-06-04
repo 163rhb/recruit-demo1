@@ -28,6 +28,7 @@
                             <el-menu-item index="/resume">
                                 简历管理
                             </el-menu-item>
+
                         <!--
                         <el-menu-item>
                             面试管理
@@ -61,7 +62,6 @@
         name: "Hr_Index",
         data(){
             return{
-
             }
         },
         methods:{

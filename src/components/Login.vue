@@ -41,7 +41,6 @@ export default {
                 rules:{
                     username:[{required:true,message:"请输入用户名",trigger:'blur'}],
                     password:[{required: true,message: "请输入密码",trigger:'blur'}]
-
                 }
             }
         },
@@ -55,12 +54,15 @@ export default {
                         let params='mobile='+this.LoginForm.username+'&password='+this.LoginForm.password
                         this.postRequst1(url,params).then(resp=>{
                             this.loading=false
-                           if(resp)
+                           if(resp.data==1)
                            {
                                console.log(resp)
                                this.$message.success('登录成功！')
-                               window.sessionStorage.setItem("user",JSON.stringify(resp))
+
                                this.$router.replace('/Hr_index')
+                           }
+                           else {
+                               this.$message.error("用户名或密码错误")
                            }
                        })
                     } else {

@@ -4,6 +4,7 @@ import Login from "@/components/Login";
 import Hr_Index from "@/components/Hr_Index";
 import Position from "@/components/hr/Position";
 import Resume from "@/components/hr/Resume";
+import notFound from "@/components/notFound";
 Vue.use(Router)
 export default new Router(
     {
@@ -33,6 +34,11 @@ export default new Router(
 
                 ]
             },
+            {
+                path: '*',
+                name: 'error',
+                component: notFound,
+            }
             ]
     }
 )
